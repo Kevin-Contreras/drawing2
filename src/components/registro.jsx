@@ -77,12 +77,14 @@ const formulario = async (event)=>{
       <input id="password" name="password" type="password" onChange={lista} value={contrasenia} />
       <label for="pass">Avatar</label>
       <input id="avatars"  type="file" name="avatar" onChange={lista} accept="image/*"   />
+<div style={{display: "flex",justifyContent: "center"}}>
+<Button type="submit" style={{top:"30px"}} color="neutral">REGISTRARSE</Button>   
 
-      <Button type="submit" style={{left:"40%",top:"30px"}} color="neutral">REGISTRARSE</Button>   
+</div>
       </form>
     </div>
-    <div style={{display:"flex",justifyContent:"center"}}>
-<img  src={"https://api-drawing.vercel.app/uploads/imagenes/5.gif"}></img>
+    <div  style={{display:"flex",justifyContent:"center"}}>
+<img className='ii' src={"https://api-drawing.vercel.app/uploads/imagenes/5.gif"}></img>
 
 </div>
        </div>

@@ -84,7 +84,7 @@ let nombre = await usu2.json()
 
 <div className='con' style={{marginTop:"50px"}}>
 {(dato==false)?<CircularProgress style={{margin:"auto",color:"red"}} />:(busqueda.length==0)?
-  <div style={{  display: "flex",justifyContent: "center",alignItems: "center",height: "70vh"}}><div><img style={{width:"300px",height:"300px"}} src={"https://api-drawing.vercel.app/uploads/imagenes/1.gif"}></img><h1 style={{color:"white"}}>No tienes solicitudes</h1></div></div>: busqueda.map((dato)=>{
+  <div style={{  display: "flex",justifyContent: "center",alignItems: "center",height: "70vh"}}><div><img style={{width:"300px",height:"300px"}} src={"https://api-drawing.vercel.app/uploads/imagenes/1.gif"}></img><h1 style={{color:"white",textAlign:"center",marginTop:"20px"}}>No tienes solicitudes</h1></div></div>: busqueda.map((dato)=>{
 return<div class="cardp">
 <header class="card-personal-header" style={{backgroundImage:"url('"+dato.avatar+"')"}}>
 <button class="card-personal-add" onClick={aceptar} value={dato.username} >

@@ -57,6 +57,7 @@
 .con{
  width: 100%;
   gap:50px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -239,4 +240,12 @@ margin-bottom: 16px;
 
 .card-personal-info a:hover span{
   color: #ddd;
+}
+@media screen and (max-width:700px){
+  .letra{
+    font-size: 25px;
+    margin: 40px;
+    text-align: center;
+  }
+  
 }

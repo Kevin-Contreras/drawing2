@@ -2,16 +2,20 @@ import { useEffect, useState } from 'react'
 
 import '../App.css'
 import { json } from 'react-router-dom'
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Lienzos() {
     let [data,setData] = useState([])
+    let [dato,setDato] = useState(false)
+
     let contador = 0
 useEffect(()=>{
-
+setDato(false)
     fetch("https://api-drawing.vercel.app/liensos").then(function(res){
         return res.json()
      }).then(function(res){
         setData(res)
+        setDato(true)
          console.log(res)
      })
 
@@ -20,8 +24,8 @@ useEffect(()=>{
   return (
    
 <div class="gallery2">
-
-    {data.map(function(fila){
+{(dato==false)?<CircularProgress style={{margin:"auto",color:"red"}} />:
+    data.map(function(fila){
       
      return <>
      {(fila.username=="predeterminado")? 
@@ -53,6 +57,7 @@ useEffect(()=>{
     }
        
     )}
+  
     </div>
   )
 }

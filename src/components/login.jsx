@@ -94,7 +94,10 @@ if(respuesta.err==null){
   color="info" 
   onChange={(e)=>setContraseniaLogin(e.target.value)}
 />
-<Button type="submit" style={{left:"40%",top:"30px"}} color="neutral">INICIAR SESION</Button>   
+<div style={{display: "flex",justifyContent: "center"}}>
+<Button type="submit" style={{top:"30px"}} color="neutral">INICIAR SESION</Button>   
+
+</div>
  </form>
     <ToastContainer
 position="top-right"
@@ -108,8 +111,8 @@ draggable
 pauseOnHover
 theme="dark"
 />
-<div style={{display:"flex",justifyContent:"center"}}>
-<img  src={"https://api-drawing.vercel.app/uploads/imagenes/5.gif"}></img>
+<div  style={{display:"flex",justifyContent:"center"}}>
+<img className='ii' src={"https://api-drawing.vercel.app/uploads/imagenes/5.gif"}></img>
 
 </div>
        </div>

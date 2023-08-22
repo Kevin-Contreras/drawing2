@@ -105,7 +105,15 @@ useEffect(()=>{
 <div className='con' style={{marginTop:"50px"}}>
 
 
-{(dato2==false)?<CircularProgress style={{margin:"auto",color:"red"}} />:(busqueda.length==0)? <div style={{  display: "flex",justifyContent: "center",alignItems: "center",height: "70vh"}}><div><img style={{width:"300px",height:"300px",float:"right"}} src={"https://api-drawing.vercel.app/uploads/imagenes/3.gif"}></img><h1 style={{color:"white"}}>No tienes amigos, has algunos :3</h1></div></div> :busqueda.map((dato)=>{
+{(dato2==false)?<CircularProgress style={{margin:"auto",color:"red"}} />:(busqueda.length==0)? 
+<div style={{  display: "flex",justifyContent: "center",alignItems: "center",height: "70vh"}}>
+    <div>
+    <div style={{display:"flex",justifyContent:"center"}}>
+        <img  style={{width:"300px",height:"300px"}} src={"https://api-drawing.vercel.app/uploads/imagenes/3.gif"}></img>
+        </div>
+        <h1 style={{color:"white",textAlign:"center",margin:"40px"}}>No tienes amigos, has algunos :3</h1>
+        </div>
+        </div> :busqueda.map((dato)=>{
     return<div class="cardp">
     <header class="card-personal-header" style={{backgroundImage:"url('"+dato.avatar+"')"}}>
   <button class="card-personal-d" value={dato.username} onClick={solicitud2}>X</button>

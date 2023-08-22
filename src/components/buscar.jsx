@@ -127,7 +127,16 @@ console.log(respuesta)
 <div className='con'>
 {
 
-(dato2==false)?<CircularProgress style={{color:"red"}} ></CircularProgress>:(busqueda.length==0)? <div style={{  display: "flex",justifyContent: "center",alignItems: "center",height: "70vh"}}><div><img style={{width:"300px",height:"300px",float:"right"}} src={"https://api-drawing.vercel.app/uploads/imagenes/4.gif"}></img><h1 style={{color:"white"}}>Busca a un usuario y hazte amigo de el </h1></div></div> : busqueda.map((dato)=>{
+(dato2==false)?<CircularProgress style={{color:"red"}} ></CircularProgress>:
+(busqueda.length==0)? <div >
+  <div  >
+    
+     <div style={{display:"flex",justifyContent:"center"}}>
+     <img style={{width:"300px",height:"300px"}} src={"https://api-drawing.vercel.app/uploads/imagenes/4.gif"}></img>
+      </div>
+      <h1 className='letra' style={{color:"white"}}>Busca a un usuario y hazte amigo de el </h1>
+      </div>
+      </div> : busqueda.map((dato)=>{
 
 return <div class="cardp">
 <header class="card-personal-header" style={{backgroundImage:"url('"+dato.avatar+"')"}}>
