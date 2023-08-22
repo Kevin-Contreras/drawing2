@@ -33,7 +33,7 @@ body{
   background-color: #b41616 ;
 }
 .contenedor{
-height: 100vh;
+height: 70vh;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -186,7 +186,6 @@ form{
   background: #FFFFFF;
   position: absolute;
   left: 45%;
-  top: 90%;
   border: 0 solid #E2E8F0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
