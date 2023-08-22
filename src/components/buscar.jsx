@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import CircularProgress from '@mui/material/CircularProgress';
 
-import '../App2.css'
+import '../app2.css'
 
 import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';

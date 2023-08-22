@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import '../App2.css'
+import '../app2.css'
 import CircularProgress from '@mui/material/CircularProgress';
 
 import { Link } from 'react-router-dom'
