@@ -95,7 +95,10 @@ return(
         <main className='contenedor'>
         <canvas className="nuestroCanvas" width="900px" height="500px"></canvas>
         </main>
+        <div style={{display: "flex",justifyContent: "center"}}>
         <button class="button-47"  onClick={handleImageChange} role="button">Guardar</button>
+
+        </div>
 
         <ToastContainer
 position="top-right"
