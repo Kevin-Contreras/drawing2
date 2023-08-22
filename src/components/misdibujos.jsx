@@ -42,6 +42,7 @@ function MisDibujos() {
     
     {(dato2!=true)?<CircularProgress style={{margin:"auto",color:"red"}}/>:(data.length==0)? <div style={{  display: "flex",justifyContent: "center",alignItems: "center",height: "70vh"}}><div><img style={{width:"300px",height:"300px",float:"right"}} src={"https://api-drawing.vercel.app/uploads/imagenes/2.gif"}></img><h1 style={{color:"white"}}>No tienes dibujos, realiza algunos :3</h1></div></div> :data.map(function(fila){
      return <div class="image-container">
+      
    <img src={fila.imagen} alt="Imagen de fondo" class="background-image"/>
 
    </div>
