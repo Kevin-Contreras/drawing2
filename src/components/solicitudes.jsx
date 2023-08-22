@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import '../App2.css'
-
-import { Link } from 'react-router-dom'
+import '../app2.css'
 import CircularProgress from '@mui/material/CircularProgress';
 function Solicitud() {
    
