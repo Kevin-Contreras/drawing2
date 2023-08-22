@@ -41,7 +41,7 @@ function Nav() {
               {(usuario==null)?"":<Link className='ni'><li class="nav-item" onClick={()=>{
 localStorage.clear();
 location.replace("/login")
-              }}><a class="nav-link active" > sign out</a></li> </Link> }
+              }}><a class="nav-link active"  style={{color:"red"}}> sign out</a></li> </Link> }
     
       </ul>
      
