@@ -1,0 +1,242 @@
+
+  
+  .wrapper {
+    width: 90%;
+    max-width: 31.25rem;
+    margin: 6rem auto;
+  }
+  
+  .label {
+    font-size: .625rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    letter-spacing: +1.3px;
+    margin-bottom: 1rem;
+  }
+  
+  .searchBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #searchQueryInput {
+    width: 100%;
+    height: 2.8rem;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    border-radius: 1.625rem;
+    padding: 0 3.5rem 0 1.5rem;
+    font-size: 1rem;
+  }
+  
+  #searchQuerySubmit {
+    width: 3.5rem;
+    height: 2.8rem;
+    border-radius:30px ;
+    margin-left: -3.5rem;
+    background: none;
+    border: none;
+    outline: none;
+    background: rgb(190, 190, 190);
+  }
+  
+  #searchQuerySubmit:hover {
+    cursor: pointer;
+  }
+  .svgs{
+
+    width:24px;
+    height:24px
+  }
+
+
+
+.con{
+ width: 100%;
+  gap:50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+
+
+.cardp{
+  width: 290px;
+  border-radius:20px ;
+  height: auto;
+ display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #333;
+  color: #ddd;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+
+.card-personal-header{
+  width: 100%;
+  height: 430px;
+  display: block;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  aling-items: flex-end;
+  justify-content: flex-end;
+}
+
+.card-personal-header::before{
+content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 2;  
+  background: rgba(50, 50, 50, 0.589);
+  display: block;
+  position: absolute;
+  top: 0;
+  lefT:0;
+  right: 0;
+  bottom: 0;
+}
+.circle-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #f00; /* Cambia el color de fondo a tu preferencia */
+  border-radius: 50%;
+  margin-left: 10px;
+}
+ .cardp .card-personal-add{
+  position: absolute;
+  height: 36px;
+  width: 40px;
+  top: 16px;
+   right: 16px;
+   font-weight: 300;
+   cursor: pointer;
+   color: rgb(255, 255, 255);
+   border: none;
+   font-size: 20px;
+
+   background-color: #14a319;
+   border-radius: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.cardp .card-personal-d{
+  position: absolute;
+  height: 36px;
+  width: 40px;
+  top: 16px;
+   right: 16px;
+   font-weight: 300;
+   cursor: pointer;
+   color: rgb(255, 255, 255);
+   border: none;
+   font-size: 20px;
+
+   background-color: #e32016;
+   border-radius: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.container-fluid{
+  text-align: center !important;
+}
+.cardp .card-personal-add svg{
+  width: 20px;
+  height: 20px;
+  transition: 0.3s linear;
+    stroke: #ddd;
+    position: relative;
+}
+.cardp .card-personal-add:hover svg{
+ stroke: rgba(104, 109, 224,1.0);
+}
+
+.card-personal-header > *{
+  position: relative;
+  z-index: 100;
+}
+
+.card-personal-header h1{
+  font-size: 52px;
+}
+
+.card-personal-link{
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.card-personal-link:hover{
+  text-decoration: underline #121217;
+}
+.cardp a{
+  text-decoration: none;
+  color: inherit;
+}
+.card-personal-description{
+margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.4rem;
+  font-weight: 700;
+  opacity: 0.7
+}
+
+.card-personal-info{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-personal-info a{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  background: #121217;
+  transition: 0.3s linear;
+}
+
+.card-personal-info a:hover{
+  background: #090911;
+  color: #ddd;
+}
+
+.cardp a, .cardp p, .cardp h1{ 
+  font-family: sans-serif;
+}
+
+.cardp a span{
+  color: rgba(104, 109, 224,1.0);
+  margin-right: 4px;
+}
+
+
+.card-personal-info a:hover span{
+  color: #ddd;
+}
