@@ -42,6 +42,8 @@ x=cursoX
 y=cursoY
    }
    const dibujar2 = (cursoX,cursoY)=>{
+    window.document.body.style.overflowY = 'hidden';
+
     ctx.beginPath()
     ctx.moveTo(x,y)
     ctx.linewith=100;
@@ -61,6 +63,7 @@ const mouseDown =(event)=>{
 
 }
 const mouseDown2 =(event)=>{
+
     x=event.targetTouches[0].screenX;
     y=event.targetTouches[0].screenY;
     dibujar2(x,y)
@@ -72,12 +75,15 @@ const mouseUp=(event)=>{
 lienzo.removeEventListener("mousemove",mouseMoving)
 }
 const mouseUp2=(event)=>{
+    window.document.body.style.overflowY = '';
+
     lienzo.removeEventListener("touchmove",mouseMoving2)
     }
 const mouseMoving =(event)=>{
 dibujar(event.offsetX,event.offsetY)
 }
 const mouseMoving2 =(event)=>{
+
     dibujar2(event.targetTouches[0].screenX,event.targetTouches[0].screenY)
     }
    
