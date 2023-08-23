@@ -17,13 +17,18 @@ function Lineas() {
     useEffect(()=>{
        lienzo=  document.querySelector('.nuestroCanvas');
          ctx = lienzo.getContext('2d');
-         lienzo.addEventListener("mousedown",mouseDown)
-         ctx.fillStyle = 'white';
+        
 
-         ctx.fillRect(0, 0, lienzo.width, lienzo.height);
-
-       
-    },[])
+         console.log(lienzo.parentNode.clientWidth)
+            lienzo.width = 900;
+            lienzo.height = 500;
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, lienzo.width, lienzo.height);
+            lienzo.addEventListener("mousedown",mouseDown)
+            lienzo.addEventListener("touchstart",mouseDown2)
+      
+      
+},[])
 
    const dibujar = (cursoX,cursoY)=>{
 ctx.beginPath()
@@ -36,25 +41,47 @@ ctx.stroke()
 x=cursoX
 y=cursoY
    }
-
+   const dibujar2 = (cursoX,cursoY)=>{
+    ctx.beginPath()
+    ctx.moveTo(x,y)
+    ctx.linewith=100;
+    ctx.strokeStyle="#000";
+    ctx.lineTo(cursoX,cursoY);
+    ctx.stroke()
+    x=cursoX
+    y=cursoY
+       }
 const mouseDown =(event)=>{
     x=event.offsetX;
     y=event.offsetY
-
+    
     dibujar(x,y)
     lienzo.addEventListener("mousemove",mouseMoving)
     lienzo.addEventListener("mouseup",mouseUp)
 
 }
+const mouseDown2 =(event)=>{
+    x=event.targetTouches[0].screenX;
+    y=event.targetTouches[0].screenY;
+    dibujar2(x,y)
+    lienzo.addEventListener("touchmove",mouseMoving2)
+    lienzo.addEventListener("touchend",mouseUp2)
+
+}
 const mouseUp=(event)=>{
 lienzo.removeEventListener("mousemove",mouseMoving)
 }
+const mouseUp2=(event)=>{
+    lienzo.removeEventListener("touchmove",mouseMoving2)
+    }
 const mouseMoving =(event)=>{
 dibujar(event.offsetX,event.offsetY)
 }
+const mouseMoving2 =(event)=>{
+    dibujar2(event.targetTouches[0].screenX,event.targetTouches[0].screenY)
+    }
    
        const handleImageChange = async (e) => {
-       console.log(localStorage.getItem("userName"),"perra")
       let subir  =   await fetch("https://api-drawing.vercel.app/save", {
             method: 'POST',
             headers: {
@@ -88,12 +115,11 @@ if(subir.ok==true){
         theme: "dark",
         });
 }
-          console.log(subir)
       };
 return(
     <div>
         <main className='contenedor'>
-        <canvas className="nuestroCanvas" width="900px" height="500px"></canvas>
+        <canvas className="nuestroCanvas" ></canvas>
         </main>
         <div style={{display: "flex",justifyContent: "center"}}>
         <button class="button-47"  onClick={handleImageChange} role="button">Guardar</button>
