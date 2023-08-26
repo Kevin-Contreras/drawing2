@@ -31,7 +31,7 @@ function Nav() {
   <div class="container-fluid ">
   {(usuario==null)?"":<img style={{width:"55px",height:"55px",left:"80px", marginRight:"1%",borderRadius:"200px"}} src={usuario} alt="" />} 
 
-    <Link to={"/"} className='ni'> <a  class="navbar-brand sa" href="#">DRAWING.IO</a></Link>
+    <Link to={"/"} className='ni'> <a  onClick={click} class="navbar-brand sa" href="#">DRAWING.IO</a></Link>
     <button class="navbar-toggler quitar "  onClick={click}type="button"  data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span  class="navbar-toggler-icon"></span>
     </button>
