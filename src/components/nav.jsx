@@ -15,13 +15,15 @@ function Nav() {
     console.log(usuario)
   })
   let click = (e)=>{
-    console.log(nav)
     if(nav=="none"){
       setNav("block")
     }else{
       setNav("none")
     }
    
+  }
+  let as = ()=>{
+    setNav("none")
   }
   return (
    
@@ -31,8 +33,8 @@ function Nav() {
   <div class="container-fluid ">
   {(usuario==null)?"":<img style={{width:"55px",height:"55px",left:"80px", marginRight:"1%",borderRadius:"200px"}} src={usuario} alt="" />} 
 
-    <Link to={"/"} className='ni'> <a  onClick={setNav("none")} class="navbar-brand sa" href="#">DRAWING.IO</a></Link>
-    <button class="navbar-toggler quitar "  onClick={click}type="button"  data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <Link to={"/"} className='ni'> <a  onClick={as} class="navbar-brand sa" href="#">DRAWING.IO</a></Link>
+    <button class="navbar-toggler quitar "  onClick={click} type="button"  data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span  class="navbar-toggler-icon"></span>
     </button>
      <div className="collapse navbar-collapse " style={{display:nav}} id="navbarText">
